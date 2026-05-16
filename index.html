@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pennington Dental Care · Crafted smiles, quietly extraordinary.</title>
+<meta name="description" content="Advanced family & cosmetic dentistry in Pennington, NJ. Led by Dr. Sri Angara. Personalized care, calm rooms, technology you can trust." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+:root {
+  --navy-deep: #0A3B6A;
+  --navy-ink:  #062845;
+  --blue-accent: #007BFF;
+  --blue-soft: #E7F1FF;
+  --cream: #FAF7F2;
+  --bg: #FFFFFF;
+  --ink: #0A3B6A;
+  --muted: #5B6B7E;
+  --line: #E5EAF0;
+  --gold: #C9A961;
+
+  --font-display: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-sans:    'Inter Tight', 'Manrope', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --s-1: 4px; --s-2: 8px; --s-3: 16px; --s-4: 24px;
+  --s-5: 40px; --s-6: 64px; --s-7: 96px; --s-8: 144px;
+
+  --r-sm: 6px; --r-md: 14px; --r-lg: 28px; --r-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(10,59,106,.04), 0 2px 8px rgba(10,59,106,.04);
+  --shadow-md: 0 4px 16px rgba(10,59,106,.08), 0 12px 40px rgba(10,59,106,.06);
+  --shadow-lg: 0 20px 60px rgba(10,59,106,.12);
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--bg);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+h1,h2,h3,h4 { font-family: var(--font-display); color: var(--navy-ink); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; margin: 0; }
+p { margin: 0; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 var(--s-4); }
+@media (min-width: 768px) { .container { padding: 0 var(--s-5); } }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--navy-deep); border-radius: var(--r-pill); border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--navy-ink); }
+
+/* ---------- Utility ---------- */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.section { padding: 56px 0; }
+@media (min-width: 768px) { .section { padding: var(--s-7) 0; } }
+@media (min-width: 1024px) { .section { padding: var(--s-8) 0; } }
+.section-cream { background: var(--cream); }
+.section-soft { background: linear-gradient(180deg, #fff 0%, var(--blue-soft) 100%); }
+
+.section-head { text-align: center; max-width: 720px; margin: 0 auto var(--s-5); }
+@media (min-width: 768px) { .section-head { margin-bottom: var(--s-6); } }
+.section-head h2 { font-size: clamp(28px, 4.6vw, 56px); margin-top: 10px; text-wrap: balance; line-height: 1.05; }
+.section-head p { color: var(--muted); margin-top: 12px; font-size: 15.5px; max-width: 56ch; margin-left: auto; margin-right: auto; }
+@media (min-width: 768px) { .section-head p { font-size: 17px; } }
+
+/* Reveal */
+.reveal { opacity: 0; transform: translate3d(0,24px,0); transition: opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: translate3d(0,0,0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none; }
+}
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-sans);
+  font-size: 15px; font-weight: 500;
+  transition: transform 300ms ease, box-shadow 300ms ease, background 300ms ease, color 300ms ease;
+  min-height: 48px;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--blue-accent); color: #fff;
+  box-shadow: 0 4px 14px rgba(0,123,255,.25);
+  position: relative; overflow: hidden;
+}
+.btn-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 28px rgba(0,123,255,.32); }
+.btn-primary .shine {
+  position: absolute; top: 0; left: -120%; width: 60%; height: 100%;
+  background: linear-gradient(110deg, transparent 20%, rgba(255,255,255,.45) 50%, transparent 80%);
+  transform: skewX(-20deg); pointer-events: none;
+}
+.btn-primary.sweep .shine { animation: sweep 1.1s ease-out; }
+@keyframes sweep { 0% { left: -120%; } 100% { left: 140%; } }
+
+.btn-ghost {
+  background: transparent; color: var(--navy-deep);
+  border: 1.5px solid var(--navy-deep);
+}
+.btn-ghost:hover { background: var(--navy-deep); color: #fff; transform: translateY(-2px); }
+
+.btn-white {
+  background: #fff; color: var(--navy-ink);
+  box-shadow: 0 6px 20px rgba(0,0,0,.18);
+}
+.btn-white:hover { transform: translateY(-2px) scale(1.02); }
+
+.link-arrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--blue-accent);
+  transition: gap 300ms ease;
+}
+.link-arrow:hover { gap: 14px; }
+.link-arrow i { font-size: 11px; }
+
+/* ---------- Announcement strip ---------- */
+.announce {
+  background: var(--navy-ink); color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding: 9px var(--s-3);
+  letter-spacing: 0.02em;
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; flex-wrap: wrap;
+  line-height: 1.4;
+}
+.announce .pin { color: var(--gold); }
+.announce span { opacity: 0.9; }
+.announce .sep { margin: 0 4px; opacity: 0.35; }
+@media (max-width: 600px) {
+  .announce { font-size: 12px; padding: 8px 14px; gap: 6px; }
+  .announce .addr-short { display: inline; }
+  .announce .addr-full, .announce .sep, .announce .no-medicaid { display: none; }
+}
+@media (min-width: 601px) {
+  .announce .addr-short { display: none; }
+}
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  /* Solid bg avoids the per-frame re-blur cost of backdrop-filter while scrolling. */
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow 250ms ease;
+  /* Promote to its own compositor layer so scroll doesn't repaint it. */
+  transform: translateZ(0);
+  will-change: transform;
+  contain: layout paint style;
+}
+.nav.scrolled { box-shadow: 0 4px 16px rgba(10,59,106,.06); }
+.nav-inner {
+  max-width: 1320px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px var(--s-4);
+}
+@media (min-width: 768px) { .nav-inner { padding: 18px var(--s-5); } }
+
+.nav-logo img { height: 44px; width: auto; display: block; }
+
+.nav-links {
+  display: none;
+  gap: 32px;
+  align-items: center;
+  font-size: 14px;
+}
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-links a {
+  color: var(--navy-ink); font-weight: 500; position: relative;
+  padding: 6px 0;
+  transition: color 200ms ease;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 1.5px; background: var(--blue-accent);
+  transition: width 300ms ease;
+}
+.nav-links a:hover { color: var(--blue-accent); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta { display: none; gap: 12px; align-items: center; }
+@media (min-width: 1024px) { .nav-cta { display: flex; } }
+.phone-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--navy-deep);
+  border-radius: var(--r-pill);
+  font-size: 14px; font-weight: 500;
+  color: var(--navy-deep);
+  transition: all 250ms ease;
+}
+.phone-pill:hover { background: var(--navy-deep); color: #fff; }
+.phone-pill i { font-size: 12px; }
+
+.nav-cta .btn { padding: 12px 22px; font-size: 14px; min-height: 44px; }
+
+.hamburger {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: var(--r-sm);
+  color: var(--navy-ink);
+  font-size: 20px;
+}
+@media (min-width: 1024px) { .hamburger { display: none; } }
+
+/* Mobile drawer */
+.drawer {
+  position: fixed; inset: 0 0 0 auto; width: min(360px, 88vw);
+  background: #fff; z-index: 100;
+  transform: translateX(100%);
+  transition: transform 450ms cubic-bezier(.2,.7,.2,1);
+  display: flex; flex-direction: column;
+  box-shadow: -20px 0 60px rgba(10,59,106,.18);
+}
+.drawer.open { transform: translateX(0); }
+.drawer-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px var(--s-4); border-bottom: 1px solid var(--line);
+}
+.drawer-close { font-size: 22px; width: 40px; height: 40px; color: var(--navy-ink); }
+.drawer-links { padding: var(--s-4); display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.drawer-links a {
+  padding: 16px 8px;
+  font-size: 20px; font-family: var(--font-display); color: var(--navy-ink);
+  border-bottom: 1px solid var(--line);
+  opacity: 0; transform: translateX(20px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+.drawer.open .drawer-links a {
+  opacity: 1; transform: none;
+}
+.drawer.open .drawer-links a:nth-child(1) { transition-delay: 80ms; }
+.drawer.open .drawer-links a:nth-child(2) { transition-delay: 130ms; }
+.drawer.open .drawer-links a:nth-child(3) { transition-delay: 180ms; }
+.drawer.open .drawer-links a:nth-child(4) { transition-delay: 230ms; }
+.drawer.open .drawer-links a:nth-child(5) { transition-delay: 280ms; }
+.drawer.open .drawer-links a:nth-child(6) { transition-delay: 330ms; }
+.drawer-cta { padding: var(--s-4); display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--line); }
+.drawer-cta .btn { justify-content: center; width: 100%; }
+
+.scrim {
+  position: fixed; inset: 0; background: rgba(6,40,69,.4); z-index: 90;
+  opacity: 0; pointer-events: none; transition: opacity 300ms ease;
+}
+.scrim.open { opacity: 1; pointer-events: auto; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding: 40px 0 56px;
+  background:
+    radial-gradient(ellipse 80% 60% at 90% 0%, var(--blue-soft) 0%, transparent 60%),
+    #fff;
+  overflow: hidden;
+}
+@media (min-width: 768px) { .hero { padding: var(--s-6) 0 var(--s-7); } }
+@media (min-width: 1024px) { .hero { padding: var(--s-7) 0 var(--s-8); } }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .hero-grid { grid-template-columns: 55fr 45fr; gap: var(--s-7); }
+}
+
+.hero-kicker { margin-bottom: var(--s-4); }
+.hero h1 {
+  font-size: clamp(40px, 7.6vw, 88px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--s-4);
+  color: var(--navy-ink);
+  font-weight: 500;
+  text-wrap: balance;
+}
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.hero h1 .word.italic { font-style: italic; font-weight: 400; position: relative; }
+.hero h1 .word.italic .swoosh {
+  position: absolute; left: -2%; right: -2%; bottom: -8px;
+  width: 104%; height: 14px;
+  pointer-events: none;
+}
+.hero h1 .word.italic .swoosh path {
+  fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round;
+  stroke-dasharray: 320; stroke-dashoffset: 320;
+}
+.hero.loaded h1 .word.italic .swoosh path { animation: draw 1400ms ease 1.4s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+.hero.loaded h1 .word { opacity: 1; transform: none; }
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0 0 var(--s-5);
+  line-height: 1.55;
+}
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: var(--s-5); }
+.hero-trust { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.trust-avatars { display: flex; }
+.trust-avatars span {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid #fff; margin-left: -10px;
+  background-size: cover; background-position: center;
+  box-shadow: 0 2px 6px rgba(10,59,106,.12);
+}
+.trust-avatars span:first-child { margin-left: 0; }
+.trust-text { font-size: 13px; color: var(--muted); }
+.trust-text b { color: var(--navy-ink); font-weight: 600; }
+.stars { color: #F5B82E; letter-spacing: 1px; font-size: 13px; }
+
+/* Hero image — framed portrait */
+.hero-frame {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--r-md);
+  margin-left: auto;
+  max-width: 520px;
+  width: 100%;
+}
+.hero-frame::before {
+  content: '';
+  position: absolute;
+  inset: -12px -12px 12px 12px;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--r-md);
+  pointer-events: none;
+}
+.hero-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  position: relative;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 1200ms ease, transform 1200ms ease;
+}
+.hero.loaded .hero-frame img { opacity: 1; transform: scale(1); }
+
+.special-card {
+  position: absolute;
+  left: -16px; bottom: -28px;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  padding: 18px 22px;
+  max-width: 290px;
+}
+.special-card .label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.special-card .price {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--navy-ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.special-card .price small { font-size: 14px; font-weight: 400; color: var(--muted); margin-left: 4px; }
+.special-card .desc {
+  font-size: 12px; color: var(--muted); line-height: 1.4; margin-bottom: 10px;
+}
+.special-card .link-arrow { font-size: 13px; }
+
+@media (max-width: 1023px) {
+  .hero-frame { margin: 0 auto; max-width: 320px; }
+  .special-card { left: 0; right: 0; margin: 0 auto; max-width: 300px; }
+}
+@media (max-width: 600px) {
+  .hero-frame { max-width: 260px; }
+  .hero-sub { font-size: 15.5px; margin-bottom: 22px; }
+  .hero h1 { margin-bottom: 14px; }
+}
+
+/* ---------- Trust bar ---------- */
+.trust-bar { padding: 40px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--cream); }
+@media (min-width: 768px) { .trust-bar { padding: var(--s-6) 0; } }
+.trust-bar h6 {
+  text-align: center;
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy-deep);
+  margin: 0 0 var(--s-4); font-weight: 500;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  white-space: nowrap;
+}
+.trust-bar h6::before, .trust-bar h6::after {
+  content: ''; width: 28px; height: 1px; background: var(--gold);
+}
+@media (min-width: 768px) { .trust-bar h6 { font-size: 11px; margin-bottom: var(--s-5); } .trust-bar h6::before, .trust-bar h6::after { width: 36px; } }
+.trust-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 12px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1180px; margin: 0 auto;
+}
+@media (min-width: 1024px) { .trust-logos { grid-template-columns: repeat(8, 1fr); gap: var(--s-4); } }
+.trust-logos img {
+  max-height: 30px; max-width: 80px; width: auto; height: auto;
+  filter: brightness(0);
+  opacity: 0.8;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+@media (min-width: 768px) { .trust-logos img { max-height: 40px; max-width: 130px; } }
+.trust-logos img:hover { opacity: 1; transform: translateY(-2px); }
+
+/* ---------- Three Pillars ---------- */
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-3);
+}
+@media (min-width: 768px) { .pillars { grid-template-columns: repeat(3, 1fr); gap: var(--s-4); } }
+
+.pillar {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--navy-ink);
+  transition: transform 500ms ease, box-shadow 500ms ease;
+  box-shadow: var(--shadow-sm);
+  contain: layout paint;
+}
+@media (min-width: 768px) { .pillar { aspect-ratio: 1 / 1.3; } }
+.pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.pillar img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 600ms ease;
+}
+.pillar:hover img { transform: scale(1.05); }
+.pillar::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(6,40,69,0) 35%, rgba(6,40,69,0.85) 100%);
+  transition: opacity 500ms ease;
+}
+.pillar:hover::after { background: linear-gradient(180deg, rgba(6,40,69,0.1) 25%, rgba(6,40,69,0.92) 100%); }
+.pillar-body {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 22px 22px 22px;
+  color: #fff; z-index: 2;
+}
+@media (min-width: 768px) { .pillar-body { padding: var(--s-5); } }
+.pillar-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  font-size: 14px; color: #fff;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) { .pillar-icon { width: 44px; height: 44px; font-size: 16px; margin-bottom: var(--s-3); } }
+.pillar h3 {
+  font-size: 24px; color: #fff; margin-bottom: 6px; font-weight: 500;
+}
+@media (min-width: 768px) { .pillar h3 { font-size: 30px; margin-bottom: 8px; } }
+.pillar p {
+  font-size: 13.5px; color: rgba(255,255,255,0.85);
+  line-height: 1.45;
+  margin-bottom: 12px;
+  max-width: 36ch;
+}
+@media (min-width: 768px) { .pillar p { font-size: 14.5px; line-height: 1.5; margin-bottom: var(--s-3); } }
+.pillar .link-arrow { color: #fff; }
+
+/* ---------- 8-item grid ---------- */
+.specialties {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  margin-top: 48px;
+}
+@media (min-width: 1024px) { .specialties { grid-template-columns: repeat(4, 1fr); margin-top: var(--s-7); } }
+.specialty {
+  padding: 20px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: background 300ms ease;
+}
+@media (min-width: 768px) { .specialty { padding: var(--s-5) var(--s-4); gap: 12px; } }
+.specialty:hover { background: var(--cream); }
+.specialty .icon {
+  width: 32px; height: 32px;
+  color: var(--blue-accent);
+  font-size: 18px;
+}
+@media (min-width: 768px) { .specialty .icon { width: 36px; height: 36px; font-size: 22px; } }
+.specialty h4 {
+  font-size: 17px; font-family: var(--font-display); font-weight: 500;
+  color: var(--navy-ink);
+  line-height: 1.15;
+}
+@media (min-width: 768px) { .specialty h4 { font-size: 20px; } }
+.specialty p {
+  font-size: 12.5px; color: var(--muted); line-height: 1.45; flex: 1;
+  display: none;
+}
+@media (min-width: 480px) { .specialty p { display: block; } }
+@media (min-width: 768px) { .specialty p { font-size: 13.5px; line-height: 1.5; } }
+.specialty .link-arrow { font-size: 12.5px; }
+
+/* ---------- Implant feature ---------- */
+.implant-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .implant-grid { grid-template-columns: 40fr 60fr; gap: var(--s-7); }
+}
+.implant-portrait {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+@media (min-width: 768px) { .implant-portrait { max-width: 440px; } }
+.implant-portrait::before {
+  content: ''; position: absolute;
+  inset: -14px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+}
+.implant-portrait img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 50%;
+}
+.implant-content h2 {
+  font-size: clamp(34px, 4vw, 52px);
+  margin-bottom: var(--s-3);
+  max-width: 16ch;
+  text-wrap: balance;
+}
+.implant-content p {
+  color: var(--muted); font-size: 16.5px; line-height: 1.65; margin-bottom: var(--s-3);
+  max-width: 58ch;
+}
+.price-card {
+  margin-top: var(--s-4);
+  display: inline-block;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 20px 28px;
+  box-shadow: var(--shadow-md);
+  transform: rotate(-1deg);
+  position: relative;
+}
+.price-card::after {
+  content: ''; position: absolute; inset: 6px;
+  border: 1px solid var(--gold); border-radius: var(--r-sm);
+  pointer-events: none; opacity: 0.5;
+}
+.price-card .label {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 6px;
+}
+.price-card .price {
+  font-family: var(--font-display); font-size: 36px;
+  font-weight: 500; color: var(--navy-ink); line-height: 1;
+  margin-bottom: 10px;
+}
+.price-card .lim { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.price-card .link-arrow { font-size: 13px; }
+
+/* ---------- Before/After ---------- */
+.beforeafter-wrap {
+  max-width: 980px; margin: 0 auto;
+}
+.ba-caption { text-align: center; max-width: 600px; margin: 0 auto var(--s-5); }
+.ba-caption h2 { font-size: clamp(30px, 3.4vw, 44px); text-wrap: balance; }
+.ba {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  user-select: none;
+  box-shadow: var(--shadow-md);
+  background: var(--cream);
+  touch-action: none;
+}
+.ba img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  pointer-events: none;
+}
+.ba .ba-after-wrap {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 50%);
+}
+.ba-label {
+  position: absolute; top: 16px;
+  background: rgba(255,255,255,0.95);
+  color: var(--navy-ink);
+  padding: 6px 14px;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-sm);
+}
+.ba-label.before { left: 16px; }
+.ba-label.after { right: 16px; }
+.ba-handle {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 2px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(10,59,106,.2);
+  transform: translateX(-50%);
+  cursor: ew-resize;
+}
+.ba-handle::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  width: 48px; height: 48px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(10,59,106,.25);
+}
+.ba-handle::after {
+  content: '\f0ec';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--navy-deep);
+  font-size: 14px;
+}
+.ba-cta { text-align: center; margin-top: var(--s-5); }
+
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px var(--s-3);
+}
+@media (min-width: 640px) { .team-grid { gap: var(--s-5); } }
+@media (min-width: 1024px) { .team-grid { grid-template-columns: repeat(4, 1fr); gap: var(--s-4); } }
+.member { display: flex; flex-direction: column; gap: 10px; }
+@media (min-width: 768px) { .member { gap: 12px; } }
+.member-photo {
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--cream);
+}
+.member-photo img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 600ms ease;
+}
+.member:hover .member-photo img { transform: scale(1.04); }
+.member h4 {
+  font-size: 17px; font-family: var(--font-display); font-weight: 500;
+  color: var(--navy-ink); line-height: 1.15;
+}
+@media (min-width: 768px) { .member h4 { font-size: 22px; } }
+.member .role {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  line-height: 1.3;
+}
+@media (min-width: 768px) { .member .role { font-size: 10.5px; letter-spacing: 0.2em; } }
+.member .bio { font-size: 12.5px; color: var(--muted); line-height: 1.5; display: none; }
+@media (min-width: 640px) { .member .bio { display: block; font-size: 14px; line-height: 1.55; } }
+.member .link-arrow { font-size: 12px; display: none; }
+@media (min-width: 640px) { .member .link-arrow { font-size: 13px; display: inline-flex; } }
+
+/* Section divider rule */
+.section-divider {
+  display: flex; align-items: center; gap: 16px;
+  max-width: 600px; margin: 0 auto var(--s-6);
+}
+.section-divider .line { flex: 1; height: 1px; background: var(--line); }
+.section-divider .ornament { color: var(--gold); font-size: 10px; }
+
+/* ---------- Specials ---------- */
+.specials-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--s-3);
+}
+@media (min-width: 768px) { .specials-grid { grid-template-columns: 1fr 1fr; gap: var(--s-5); } }
+.special {
+  background: #fff;
+  border: 1px solid var(--gold);
+  border-radius: var(--r-md);
+  padding: 24px 22px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+@media (min-width: 768px) { .special { padding: var(--s-5); } }
+.special::before {
+  content: ''; position: absolute; inset: 6px;
+  border: 1px solid rgba(201,169,97,.3); border-radius: 10px;
+  pointer-events: none;
+}
+.special .label {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.special h3 {
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 500;
+  color: var(--navy-ink);
+  margin-bottom: 10px;
+}
+.special .price-big {
+  font-family: var(--font-display);
+  font-size: 44px; font-weight: 500;
+  color: var(--blue-accent); line-height: 1;
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) { .special .price-big { font-size: 56px; margin-bottom: 14px; } }
+.special .price-big small { font-size: 16px; color: var(--muted); margin-left: 6px; }
+.special ul { list-style: none; padding: 0; margin: 0 0 var(--s-4); }
+.special ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+.special ul li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: var(--blue-accent);
+  font-size: 11px;
+}
+.special .fine { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.5; }
+
+/* ---------- Why Choose Us ---------- */
+.promises {
+  display: grid; grid-template-columns: 1fr; gap: var(--s-5);
+}
+@media (min-width: 768px) { .promises { grid-template-columns: repeat(3, 1fr); gap: var(--s-5); } }
+.promise .num {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.25em;
+  color: var(--gold); margin-bottom: var(--s-3);
+}
+.promise h3 {
+  font-size: 23px; font-weight: 500; color: var(--navy-ink); margin-bottom: 12px;
+  position: relative; padding-bottom: 12px;
+}
+@media (min-width: 768px) { .promise h3 { font-size: 28px; margin-bottom: var(--s-3); padding-bottom: var(--s-3); } }
+.promise h3::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 40px; height: 1.5px; background: var(--gold);
+}
+.promise p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+@media (min-width: 768px) { .promise p { font-size: 15px; line-height: 1.65; } }
+
+/* Stat counters */
+.stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin-top: var(--s-5); padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 768px) { .stats { gap: var(--s-4); margin-top: var(--s-6); padding-top: var(--s-6); } }
+.stat { text-align: center; }
+.stat .num {
+  font-family: var(--font-display); font-size: clamp(40px, 5vw, 64px);
+  font-weight: 500; color: var(--navy-ink); line-height: 1; margin-bottom: 8px;
+}
+.stat .label {
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+}
+
+/* ---------- Tech showcase ---------- */
+.tech-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+}
+@media (min-width: 640px) { .tech-grid { gap: var(--s-3); } }
+@media (min-width: 1024px) { .tech-grid { grid-template-columns: repeat(4, 1fr); } }
+.tech-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 20px 16px;
+  transition: transform 400ms ease, box-shadow 400ms ease, border-color 400ms ease;
+}
+@media (min-width: 768px) { .tech-card { padding: var(--s-5) var(--s-4); } }
+.tech-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--blue-soft); }
+.tech-card .icon {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--blue-soft); color: var(--blue-accent);
+  border-radius: 10px; font-size: 16px;
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) { .tech-card .icon { width: 48px; height: 48px; border-radius: 12px; font-size: 20px; margin-bottom: var(--s-3); } }
+.tech-card h4 {
+  font-size: 16px; font-weight: 500; color: var(--navy-ink); margin-bottom: 6px;
+  line-height: 1.2;
+}
+@media (min-width: 768px) { .tech-card h4 { font-size: 20px; margin-bottom: 8px; } }
+.tech-card p { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+@media (min-width: 768px) { .tech-card p { font-size: 14px; line-height: 1.5; } }
+
+/* ---------- Reviews ---------- */
+.reviews-head {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--s-3); flex-direction: column;
+  margin-bottom: var(--s-6);
+}
+.google-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-sm);
+}
+.google-badge img { width: 18px; height: 18px; }
+.google-badge .stars { font-size: 14px; }
+.google-badge span { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+}
+.marquee-track {
+  display: flex;
+  gap: var(--s-4);
+  animation: marquee 50s linear infinite;
+  width: max-content;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.review-card {
+  flex: 0 0 380px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: var(--s-5);
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column; gap: 12px;
+}
+@media (max-width: 639px) { .review-card { flex-basis: 300px; padding: var(--s-4); } }
+.review-card .top { display: flex; align-items: center; gap: 10px; }
+.review-card .top img.g { width: 18px; height: 18px; }
+.review-card .top .stars { color: #F5B82E; font-size: 14px; }
+.review-card blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--navy-ink);
+}
+.review-card .who {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: auto; padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.review-card .who img {
+  width: 36px; height: 36px; border-radius: 50%; object-fit: cover;
+}
+.review-card .who .name { font-weight: 600; font-size: 14px; color: var(--navy-ink); }
+.review-card .who .src { font-size: 12px; color: var(--muted); }
+
+/* ---------- Gallery ---------- */
+.gallery {
+  columns: 2;
+  column-gap: 10px;
+}
+@media (min-width: 640px) { .gallery { columns: 2; column-gap: var(--s-3); } }
+@media (min-width: 1024px) { .gallery { columns: 3; } }
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+  box-shadow: var(--shadow-sm);
+  contain: layout paint;
+}
+@media (min-width: 640px) { .gallery-item { margin-bottom: var(--s-3); } }
+.gallery-item img {
+  width: 100%; height: auto;
+  transition: transform 600ms ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item::after {
+  content: '\f00e';
+  font-family: 'Font Awesome 6 Free'; font-weight: 900;
+  position: absolute; top: 12px; right: 12px;
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.9);
+  color: var(--navy-deep);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  opacity: 0; transition: opacity 300ms ease;
+  font-size: 14px;
+}
+.gallery-item:hover::after { opacity: 1; }
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(6,40,69,0.92);
+  display: none; align-items: center; justify-content: center;
+  padding: var(--s-4);
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 92vw; max-height: 86vh; border-radius: var(--r-md); box-shadow: var(--shadow-lg); }
+.lightbox-close {
+  position: absolute; top: 20px; right: 24px;
+  width: 44px; height: 44px;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff; font-size: 18px;
+  display: flex; align-items: center; justify-content: center;
+}
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+/* ---------- Booking Modal ---------- */
+.book-modal {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(6,40,69,0.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--s-3);
+  opacity: 0; pointer-events: none;
+  transition: opacity 250ms ease;
+}
+@supports (backdrop-filter: blur(8px)) {
+  .book-modal { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+}
+.book-modal.open { opacity: 1; pointer-events: auto; }
+
+.book-dialog {
+  width: min(960px, 100%);
+  max-height: calc(100vh - 32px);
+  background: #fff;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(6,40,69,.35);
+  display: grid;
+  grid-template-columns: 1fr;
+  transform: translateY(20px) scale(0.98);
+  opacity: 0;
+  transition: transform 400ms cubic-bezier(.2,.7,.2,1), opacity 300ms ease;
+}
+@media (min-width: 768px) {
+  .book-dialog { grid-template-columns: 1.15fr 1fr; max-height: min(720px, calc(100vh - 48px)); }
+}
+.book-modal.open .book-dialog { transform: none; opacity: 1; }
+
+.book-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy-ink);
+  font-size: 16px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(10,59,106,.18);
+  transition: transform 200ms ease, background 200ms ease;
+}
+.book-close:hover { transform: rotate(90deg); background: #fff; }
+
+/* Left panel — form */
+.book-form {
+  position: relative;
+  padding: 36px 32px;
+  overflow-y: auto;
+  background: #fff;
+}
+@media (min-width: 768px) { .book-form { padding: 48px 44px; } }
+
+.book-form .eyebrow-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+}
+.book-form .eyebrow-row .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+.book-form .eyebrow-row span { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
+
+.book-form h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 38px);
+  font-weight: 500;
+  color: var(--navy-ink);
+  line-height: 1.05;
+  margin-bottom: 6px;
+  text-wrap: balance;
+}
+.book-form .lede {
+  color: var(--muted); font-size: 14px; margin-bottom: 24px;
+}
+
+.book-fields { display: flex; flex-direction: column; gap: 16px; }
+.book-field label {
+  display: block; font-size: 12px; font-weight: 600;
+  color: var(--navy-ink);
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+.book-field label .req { color: var(--blue-accent); margin-left: 2px; }
+.book-field input,
+.book-field select,
+.book-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  color: var(--navy-ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.book-field textarea { resize: vertical; min-height: 84px; font-family: inherit; }
+.book-field input::placeholder, .book-field textarea::placeholder { color: #B0BAC6; }
+.book-field input:focus,
+.book-field select:focus,
+.book-field textarea:focus {
+  border-color: var(--blue-accent);
+  box-shadow: 0 0 0 3px rgba(0,123,255,.12);
+}
+.book-field select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%230A3B6A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.book-row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+@media (min-width: 520px) { .book-row { grid-template-columns: 1fr 1fr; } }
+
+.book-submit {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px 22px;
+  background: var(--blue-accent); color: #fff;
+  border-radius: var(--r-pill);
+  font-size: 15px; font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  box-shadow: 0 6px 20px rgba(0,123,255,.28);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+.book-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,123,255,.36); }
+.book-submit:disabled { opacity: 0.65; cursor: progress; transform: none; }
+
+.book-foot {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13.5px; color: var(--muted);
+  line-height: 1.55;
+}
+.book-foot a { color: var(--navy-deep); font-weight: 600; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+
+.book-success {
+  display: none;
+  text-align: center;
+  padding: 24px 8px 0;
+}
+.book-success.show { display: block; }
+.book-success .check {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(0,123,255,.1);
+  color: var(--blue-accent);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.book-success h3 { font-family: var(--font-display); font-size: 28px; color: var(--navy-ink); margin-bottom: 8px; }
+.book-success p { color: var(--muted); font-size: 14.5px; }
+
+/* Right panel — brand & review */
+.book-aside {
+  position: relative;
+  display: none;
+  padding: 44px 36px;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(255,255,255,0.18) 0%, transparent 60%),
+    linear-gradient(155deg, #0A3B6A 0%, #1659A3 55%, #062845 100%);
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+@media (min-width: 768px) { .book-aside { display: flex; } }
+.book-aside::after {
+  content: '';
+  position: absolute; right: -80px; bottom: -80px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,169,97,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aside-brand {
+  display: flex; align-items: center; gap: 14px;
+  position: relative; z-index: 1;
+}
+.aside-brand .mark {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff 0%, #e7f1ff 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 600;
+  color: var(--navy-deep);
+  letter-spacing: -0.02em;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+}
+.aside-brand .wordmark {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.aside-brand .wordmark small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9.5px; letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.aside-tag {
+  position: relative; z-index: 1;
+  margin-top: 26px;
+}
+.aside-tag h3 {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 500; color: #fff;
+  line-height: 1.15; margin: 0 0 8px;
+  text-wrap: balance;
+}
+.aside-tag p { font-size: 13.5px; color: rgba(255,255,255,0.75); line-height: 1.55; }
+
+.aside-review {
+  position: relative; z-index: 1;
+  background: #fff;
+  color: var(--navy-ink);
+  border-radius: var(--r-md);
+  padding: 22px 22px 18px;
+  box-shadow: 0 16px 36px rgba(0,0,0,.18);
+  margin-top: auto;
+}
+.aside-review .top { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.aside-review .top img { width: 16px; height: 16px; }
+.aside-review .top .stars { color: #F5B82E; font-size: 13px; letter-spacing: 1px; }
+.aside-review blockquote {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px; line-height: 1.45;
+  color: var(--navy-ink);
+  min-height: 90px;
+}
+.aside-review .who {
+  display: flex; align-items: center; gap: 10px;
+  padding-top: 12px; border-top: 1px solid var(--line);
+}
+.aside-review .who img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+.aside-review .who .name { font-weight: 600; font-size: 13.5px; color: var(--navy-ink); }
+.aside-review .who .src { font-size: 11px; color: var(--muted); }
+
+.aside-review-nav {
+  display: flex; justify-content: flex-end; gap: 8px;
+  margin-top: 14px;
+  position: relative; z-index: 1;
+}
+.aside-review-nav button {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 200ms ease, transform 200ms ease;
+}
+.aside-review-nav button:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+
+.book-fade { transition: opacity 250ms ease; }
+.book-fade.fading { opacity: 0; }
+
+/* Body scroll lock helper */
+body.modal-open { overflow: hidden; }
+
+/* ---------- Location ---------- */
+.location-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--s-5);
+}
+@media (min-width: 1024px) { .location-grid { grid-template-columns: 1.1fr 1fr; gap: var(--s-6); } }
+.map-wrap {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4/3;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+.map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+.location-info h2 { font-size: clamp(32px, 3.6vw, 46px); margin-bottom: var(--s-3); }
+.location-info .addr {
+  font-size: 17px;
+  color: var(--ink); line-height: 1.6;
+  margin-bottom: var(--s-4);
+}
+.hours-table {
+  border-top: 1px solid var(--line);
+  margin-bottom: var(--s-4);
+}
+.hours-table .row {
+  display: flex; justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14.5px;
+}
+.hours-table .row .day { color: var(--ink); font-weight: 500; }
+.hours-table .row .time { color: var(--muted); font-family: var(--font-mono); font-size: 13px; }
+.location-info .tel {
+  display: inline-flex; align-items: baseline; gap: 12px;
+  font-family: var(--font-display);
+  font-size: 36px; color: var(--navy-ink);
+  margin-bottom: var(--s-4);
+  transition: color 200ms ease;
+}
+.location-info .tel:hover { color: var(--blue-accent); }
+.location-info .tel i { font-size: 18px; color: var(--blue-accent); }
+
+/* ---------- Final CTA ---------- */
+.finale {
+  position: relative;
+  padding: var(--s-7) 0;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-ink) 100%);
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+.finale h2 {
+  font-size: clamp(40px, 6vw, 76px);
+  color: #fff; margin-bottom: var(--s-3);
+  font-weight: 500;
+  text-wrap: balance;
+}
+.finale .sub {
+  font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: var(--s-5);
+  max-width: 50ch; margin-left: auto; margin-right: auto;
+}
+.finale .call-tiny {
+  display: block; margin-top: var(--s-4);
+  font-family: var(--font-mono); font-size: 12px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.finale .call-tiny a { color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: 2px; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--navy-ink);
+  color: rgba(255,255,255,0.7);
+  padding: var(--s-7) 0 var(--s-4);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1fr; gap: var(--s-5);
+}
+@media (min-width: 640px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: var(--s-5); } }
+.footer h5 {
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 var(--s-4); font-weight: 500;
+}
+.footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer ul li a {
+  color: rgba(255,255,255,0.7); font-size: 14px;
+  transition: color 200ms ease;
+}
+.footer ul li a:hover { color: #fff; }
+.footer-brand .brand-lockup {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: var(--s-4);
+}
+.footer-brand .brand-mark {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue-accent) 0%, #3a8eff 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+  box-shadow: 0 4px 14px rgba(0,123,255,.3);
+}
+.footer-brand .brand-name {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 500;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.footer-brand .brand-name small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+  font-weight: 500;
+}
+.footer-brand p { font-size: 14px; line-height: 1.55; margin-bottom: var(--s-3); max-width: 32ch; }
+.footer-brand .google-badge { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #fff; }
+.footer-brand .google-badge span { color: rgba(255,255,255,0.8); }
+.footer-bottom {
+  margin-top: var(--s-6);
+  padding-top: var(--s-4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: 12px; color: rgba(255,255,255,0.5);
+}
+
+/* ---------- Sticky mobile bottom bar ---------- */
+.mobile-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.98);
+  border-top: 1px solid var(--line);
+  padding: 10px var(--s-3);
+  display: flex; gap: 10px;
+  z-index: 40;
+  box-shadow: 0 -8px 24px rgba(10,59,106,.08);
+}
+@supports (backdrop-filter: blur(10px)) {
+  .mobile-bar { background: rgba(255,255,255,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+}
+.mobile-bar a { flex: 1; justify-content: center; }
+.mobile-bar .btn { width: 100%; }
+@media (min-width: 1024px) { .mobile-bar { display: none; } }
+body.has-mobile-bar { padding-bottom: 80px; }
+@media (min-width: 1024px) { body.has-mobile-bar { padding-bottom: 0; } }
+
+</style>
+</head>
+<body class="has-mobile-bar" id="top">
+
+<!-- Announcement -->
+<div class="announce">
+  <i class="fa-solid fa-location-dot pin"></i>
+  <span class="addr-full">2425 Pennington Rd #101, Pennington, NJ 08534</span>
+  <span class="addr-short">Pennington, NJ · Mon–Sat</span>
+  <span class="sep">•</span>
+  <span class="no-medicaid">We do not accept Medicaid</span>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Pennington Dental Care">
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da10b9b5e6203004a0eb9e_IMG_359DD025B749-1.avif" alt="Pennington Dental Care" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#doctor">Meet the Doctor</a>
+      <a href="#services">Services</a>
+      <a href="#specials">Specials</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:6098180300" class="phone-pill"><i class="fa-solid fa-phone"></i>609-818-0300</a>
+      <a href="#book" class="btn btn-primary">Book Appointment<span class="shine"></span></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<!-- Drawer -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da10b9b5e6203004a0eb9e_IMG_359DD025B749-1.avif" alt="" style="height:36px;" />
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-links">
+    <a href="#top">Home</a>
+    <a href="#doctor">Meet the Doctor</a>
+    <a href="#services">Services</a>
+    <a href="#specials">Specials</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="drawer-cta">
+    <a href="tel:6098180300" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> 609-818-0300</a>
+    <a href="#book" class="btn btn-primary">Book Appointment</a>
+  </div>
+</aside>
+
+<!-- ---------- HERO ---------- -->
+<main>
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <div class="kicker hero-kicker">EST. 2012 · PENNINGTON, NJ</div>
+      <h1>
+        <span class="word">Crafted</span>
+        <span class="word">smiles,</span>
+        <span class="word italic">quietly<svg class="swoosh" viewBox="0 0 200 14" preserveAspectRatio="none"><path d="M2 9 C 40 2, 90 12, 140 6 S 198 8, 198 8" /></svg></span>
+        <span class="word">extraordinary.</span>
+      </h1>
+      <p class="hero-sub">Advanced family &amp; cosmetic dentistry led by Dr. Sri Angara. Personalized care, calm rooms, technology you can trust.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary" id="heroPrimary">Book Appointment <i class="fa-solid fa-arrow-right"></i><span class="shine"></span></a>
+        <a href="tel:6098180300" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> Call 609-818-0300</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-avatars" aria-hidden="true">
+          <span style="background-image:url('https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da078785455d7a32f211b2_unnamed.avif');"></span>
+          <span style="background-image:url('https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1c935e9f03195ec443e3_Andre%20popow.avif');"></span>
+          <span style="background-image:url('https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d217539735bc1e865d8_Erin.avif');"></span>
+          <span style="background-image:url('https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d7ab60eb59a842b8e49_Meghan.avif');"></span>
+          <span style="background-image:url('https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1dbd717e072d95276fd8_emily.avif');"></span>
+        </div>
+        <div class="trust-text">
+          <div class="stars">★★★★★</div>
+          <div><b>5.0</b> from 100+ Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-frame">
+        <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67dc66366111f24d9c9ea901_pexels-fr3nks-287237.jpeg" alt="Dr. Sri Angara, lead dentist at Pennington Dental Care" />
+        <div class="special-card">
+          <div class="label">New Patient Special</div>
+          <div class="price">$99 <small>complete</small></div>
+          <div class="desc">Exam · X-Rays · Cleaning · Fluoride</div>
+          <a href="#specials" class="link-arrow">Book <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- TRUST BAR ---------- -->
+<section class="trust-bar">
+  <div class="container">
+    <h6>In-Network with Major Carriers</h6>
+    <div class="trust-logos">
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8b81cb5ca42c7014eb1_unitedhealthcare-vector-logo-2021.svg" alt="UnitedHealthcare" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8b82b3acd0be8b40bd4_cigna-3.svg" alt="Cigna" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8b8f98cfdd12ec184e0_blue-cross-blue-shield-vector-logo.svg" alt="Blue Cross Blue Shield" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8d7b66604fbd32fbd69_5f24309651b0ae9b642bcc60_5ed7c73050f6d64f894d0968_delta-dental.png" alt="Delta Dental" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8d7c4279fcf8820c40a_5f24309651b0aeccd62bcc82_aetna.png" alt="Aetna" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8d71d14690b746aac21_5f24309651b0aeb53d2bccae_metlife.png" alt="MetLife" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8d71775062d35762e0f_5f24309651b0aebe9e2bccaf_guardian.png" alt="Guardian" loading="lazy" />
+      <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e1a8d71775062d35762e12_5f24309651b0ae6f992bccb0_principal.png" alt="Principal" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ---------- SERVICES: Three Pillars ---------- -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Care, Defined</div>
+      <h2>Three pillars of practice.</h2>
+      <p>Family, cosmetic, and emergency care — delivered with the same precision and warmth, by the same trusted team.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal" id="service-family">
+        <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1f6d8cb17c92b45bd011_pexels-shvetsa-3845682.jpg" alt="Family dentistry care" loading="lazy" />
+        <div class="pillar-body">
+          <span class="pillar-icon"><i class="fa-solid fa-house-chimney-medical"></i></span>
+          <h3>Family Dentistry</h3>
+          <p>Gentle care for every age. From your child's first visit to senior dental needs — we build relationships that last decades, not just appointments.</p>
+          <a href="#service-family" class="link-arrow">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="pillar reveal reveal-delay-1" id="service-cosmetic">
+        <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1f6bdde7646925262eef_pexels-karolina-grabowska-6627278.jpg" alt="Cosmetic dental treatments" loading="lazy" />
+        <div class="pillar-body">
+          <span class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <h3>Cosmetic Treatments</h3>
+          <p>Subtle, natural, transformative. Whitening, veneers, bonding, and full smile design tailored to your face — never overdone.</p>
+          <a href="#service-cosmetic" class="link-arrow">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+      <article class="pillar reveal reveal-delay-2" id="service-emergency">
+        <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67e18997ef764225a77354d5_pexels-gustavo-fring-4971505.jpg" alt="Emergency same-day dental care" loading="lazy" />
+        <div class="pillar-body">
+          <span class="pillar-icon"><i class="fa-solid fa-truck-medical"></i></span>
+          <h3>Emergency Same-Day Care</h3>
+          <p>Broken tooth at 4 PM? We hold appointments daily for the unexpected. Call us, and you'll be seen — usually the same day.</p>
+          <a href="#service-emergency" class="link-arrow">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- 8-item specialties grid -->
+    <div class="specialties reveal">
+      <a class="specialty" href="#service-ortho">
+        <span class="icon"><i class="fa-solid fa-grip-lines"></i></span>
+        <h4>Orthodontic Services</h4>
+        <p>Clear aligners and braces for every age.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-surgery">
+        <span class="icon"><i class="fa-solid fa-stethoscope"></i></span>
+        <h4>Oral Surgery</h4>
+        <p>Extractions and surgical care, on-site.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-perio">
+        <span class="icon"><i class="fa-solid fa-shield-heart"></i></span>
+        <h4>Periodontic Treatment</h4>
+        <p>Gum health restoration and maintenance.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-pedi">
+        <span class="icon"><i class="fa-solid fa-child-reaching"></i></span>
+        <h4>Pediatric Dentistry</h4>
+        <p>Calm, kid-first care from age one.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-restorative">
+        <span class="icon"><i class="fa-regular fa-gem"></i></span>
+        <h4>Restorative Services</h4>
+        <p>Crowns, bridges, fillings — built to last.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-endo">
+        <span class="icon"><i class="fa-solid fa-droplet"></i></span>
+        <h4>Endodontics</h4>
+        <p>Modern, comfortable root canal therapy.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-cosmetic">
+        <span class="icon"><i class="fa-solid fa-star"></i></span>
+        <h4>Cosmetic Dentistry</h4>
+        <p>Veneers, whitening, full smile design.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a class="specialty" href="#service-implants">
+        <span class="icon"><i class="fa-solid fa-tooth"></i></span>
+        <h4>Implant Dentistry</h4>
+        <p>Permanent solutions for missing teeth.</p>
+        <span class="link-arrow">Explore <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- IMPLANT FEATURE ---------- -->
+<section class="section section-cream" id="service-implants">
+  <div class="container">
+    <div class="implant-grid">
+      <div class="reveal">
+        <div class="implant-portrait">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/68bb50b19004e24d59090633_Ellipse%201.png" alt="Dr. Sri Angara" loading="lazy" />
+        </div>
+      </div>
+      <div class="implant-content reveal reveal-delay-1" id="doctor">
+        <div class="kicker" style="margin-bottom: var(--s-3)">The Signature Offering</div>
+        <h2>Restore your smile with dental implants.</h2>
+        <p>A dental implant feels, functions, and ages like a natural tooth — because it integrates with bone instead of resting on it. With CBCT 3D planning and a guided surgical approach, we place implants that look quietly, completely yours.</p>
+        <p>Most patients walk in nervous and leave surprised by how routine it felt. Single tooth, multiple teeth, or full-arch — Dr. Angara handles the surgical and restorative work in one practice, in one continuous relationship.</p>
+        <div class="price-card">
+          <div class="label">Implant Special</div>
+          <div class="price">$3,500</div>
+          <div class="lim">Limited time · Single-tooth implant + crown</div>
+          <a href="#book" class="link-arrow">Reserve Consult <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- INVISALIGN BEFORE/AFTER ---------- -->
+<section class="section">
+  <div class="container beforeafter-wrap reveal">
+    <div class="ba-caption">
+      <div class="kicker">Invisalign</div>
+      <h2>Transform your smile — virtually invisible, remarkably confident.</h2>
+    </div>
+    <div class="ba" id="ba">
+      <img class="ba-before" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/68a78d3f910846515aafcf56_image%207.jpg" alt="Smile before Invisalign" />
+      <div class="ba-after-wrap"><img class="ba-after" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/68a78d53ad0aa6ca09adf032_image%206.jpg" alt="Smile after Invisalign" /></div>
+      <span class="ba-label before">Before</span>
+      <span class="ba-label after">After</span>
+      <div class="ba-handle" id="baHandle" role="slider" aria-label="Before and after comparison" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"></div>
+    </div>
+    <div class="ba-cta">
+      <a href="#book" class="btn btn-primary">Schedule Invisalign Consult <i class="fa-solid fa-arrow-right"></i><span class="shine"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- TEAM ---------- -->
+<section class="section section-cream" id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Eight portraits, eight stories</div>
+      <h2>Meet the team.</h2>
+      <div class="section-divider"><span class="line"></span><span class="ornament">◆</span><span class="line"></span></div>
+      <p>A small, tenured team that knows every patient by name. Most of us have been here a decade — that's not an accident, that's the culture.</p>
+    </div>
+    <div class="team-grid">
+      <article class="member reveal">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f40064acc5b46088427565_Photo1.jpeg" alt="Dr. Sri Angara" loading="lazy" /></div>
+        <h4>Dr. Sri Angara, DDS</h4>
+        <div class="role">Owner · Lead Dentist · Since 2012</div>
+        <p class="bio">Founder of Pennington Dental Care. A clinician's clinician — calm hands, modern training, and a relentless attention to comfort.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-1">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f4051af0effdff19132881_Photo2.jpeg" alt="Dr. Nawal A. Shaikh" loading="lazy" /></div>
+        <h4>Dr. Nawal A. Shaikh</h4>
+        <div class="role">Associate Dentist · Endodontics</div>
+        <p class="bio">Endodontic specialist with a gentle chairside manner. Patients consistently leave saying "I didn't feel a thing."</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-2">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ec0d566cba7b54e7e1_photo3Michele.jpeg" alt="Michele" loading="lazy" /></div>
+        <h4>Michele</h4>
+        <div class="role">Office Manager · Since 2014</div>
+        <p class="bio">The reason the office runs like a Swiss watch. Eleven years in, she still remembers every patient's coffee order.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-3">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ec73167645036d6b5f_photo4Jessica.jpeg" alt="Jessica" loading="lazy" /></div>
+        <h4>Jessica</h4>
+        <div class="role">Hygienist · Since 2024</div>
+        <p class="bio">Thorough, patient-led cleanings with a focus on education — leaves you with a plan, not a lecture.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ec0bede911e7a5b329_photo5Chaniece.jpeg" alt="Chaniece" loading="lazy" /></div>
+        <h4>Chaniece</h4>
+        <div class="role">Certified Dental Assistant · Since 2023</div>
+        <p class="bio">Quietly anticipates what the doctor needs before they ask. The unsung calm of every procedure.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-1">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ec62e44f8fdfd4b9ba_photo6Ingrid.jpeg" alt="Ingrid" loading="lazy" /></div>
+        <h4>Ingrid</h4>
+        <div class="role">Dental Assistant · Since 2020</div>
+        <p class="bio">Bilingual, warm, unflappable. The first person nervous patients meet — and the reason they come back.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-2">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ecb3405a2dcf31df6e_photo7ShantaKing.jpeg" alt="Shanta King" loading="lazy" /></div>
+        <h4>Shanta King</h4>
+        <div class="role">Patient Care Coordinator</div>
+        <p class="bio">Translates insurance, treatment plans, and timing into something you can actually decide on.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="member reveal reveal-delay-3">
+        <div class="member-photo"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ecd3f9a1a4d919ebf8_photo8Subha.jpeg" alt="Subha" loading="lazy" /></div>
+        <h4>Subha</h4>
+        <div class="role">Receptionist · Billing · Since 2023</div>
+        <p class="bio">The voice you hear when you call. Friendly, fluent in benefits, and exceptionally hard to fluster.</p>
+        <a href="#" class="link-arrow">Read Bio <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- SPECIALS ---------- -->
+<section class="section" id="specials">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Current Offers</div>
+      <h2>Two specials, worth your while.</h2>
+      <p>Refined care at a transparent price — limited availability, no fine-print theatrics.</p>
+    </div>
+    <div class="specials-grid">
+      <article class="special reveal">
+        <div class="label">New Patient Special</div>
+        <h3>Your first visit, complete.</h3>
+        <div class="price-big">$99 <small>all-in</small></div>
+        <ul>
+          <li>Comprehensive Exam</li>
+          <li>Digital X-Rays</li>
+          <li>Basic Cleaning</li>
+          <li>Fluoride Treatment</li>
+        </ul>
+        <p class="fine">Expires 05/23/2026. New patients only. Cannot be combined with insurance.</p>
+        <a href="#book" class="btn btn-primary">Book <i class="fa-solid fa-arrow-right"></i><span class="shine"></span></a>
+      </article>
+      <article class="special reveal reveal-delay-1">
+        <div class="label">Zoom Whitening Offer</div>
+        <h3>Brighter, in one visit.</h3>
+        <div class="price-big">$550 <small>limited</small></div>
+        <ul>
+          <li>In-office Zoom! Whitening</li>
+          <li>Custom take-home trays</li>
+          <li>Prom &amp; graduation special</li>
+          <li>Results in a single appointment</li>
+        </ul>
+        <p class="fine">Limited time — prom &amp; graduation season. Subject to clinical eligibility.</p>
+        <a href="#book" class="btn btn-primary">Book <i class="fa-solid fa-arrow-right"></i><span class="shine"></span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- WHY CHOOSE US ---------- -->
+<section class="section section-cream" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Three Promises</div>
+      <h2>Why patients stay for decades.</h2>
+    </div>
+    <div class="promises">
+      <article class="promise reveal">
+        <div class="num">01</div>
+        <h3>Skilled &amp; Caring Team</h3>
+        <p>We don't just treat teeth, we treat people. Every team member combines advanced training with genuine compassion, ensuring you feel valued, heard, and comfortable throughout your dental journey.</p>
+      </article>
+      <article class="promise reveal reveal-delay-1">
+        <div class="num">02</div>
+        <h3>Advanced Technology</h3>
+        <p>3D imaging, intraoral cameras, digital scanning, and dental lasers. We invest in tools that diagnose more precisely, treat more gently, and finish faster — because your time and comfort matter.</p>
+      </article>
+      <article class="promise reveal reveal-delay-2">
+        <div class="num">03</div>
+        <h3>Safety &amp; Comfort First</h3>
+        <p>Sterilization protocols that exceed industry standards. Calm, modern operatories designed around the patient. Scheduling that respects your day. Peace of mind, built in.</p>
+      </article>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num" data-target="13" data-suffix="+">0</div><div class="label">Years in Practice</div></div>
+      <div class="stat"><div class="num" data-target="10000" data-suffix="+">0</div><div class="label">Patients Served</div></div>
+      <div class="stat"><div class="num" data-target="100" data-suffix="+">0</div><div class="label">5-Star Reviews</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- TECH SHOWCASE ---------- -->
+<section class="section" id="tech">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">The Toolkit</div>
+      <h2>Technology in service of comfort.</h2>
+      <p>Every tool below was chosen for one reason — to make your visit faster, gentler, and more precise.</p>
+    </div>
+    <div class="tech-grid">
+      <article class="tech-card reveal">
+        <div class="icon"><i class="fa-solid fa-cube"></i></div>
+        <h4>CBCT 3D Imaging</h4>
+        <p>Detailed three-dimensional views for implant precision.</p>
+      </article>
+      <article class="tech-card reveal reveal-delay-1">
+        <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
+        <h4>iTero Digital Scanner</h4>
+        <p>Laser-accurate scans — no impression goop, no gagging.</p>
+      </article>
+      <article class="tech-card reveal reveal-delay-2">
+        <div class="icon"><i class="fa-solid fa-bolt"></i></div>
+        <h4>BIOLASE Laser</h4>
+        <p>Suture-free procedures, faster healing, less anesthetic.</p>
+      </article>
+      <article class="tech-card reveal reveal-delay-3">
+        <div class="icon"><i class="fa-solid fa-camera"></i></div>
+        <h4>Intraoral Camera</h4>
+        <p>See what we see — in HD, on the chairside monitor.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- REVIEWS ---------- -->
+<section class="section section-cream" id="reviews">
+  <div class="container">
+    <div class="reviews-head reveal">
+      <div class="kicker">Voices from Our Chairs</div>
+      <h2 style="font-size: clamp(34px, 4.4vw, 56px);">A practice patients quietly recommend.</h2>
+      <div class="google-badge">
+        <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" />
+        <span class="stars">★★★★★</span>
+        <span>5.0 · 100+ Google reviews</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee reveal">
+    <div class="marquee-track" id="marquee">
+      <!-- 5 cards, doubled in JS for seamless loop -->
+      <article class="review-card">
+        <div class="top"><img class="g" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" /><span class="stars">★★★★★</span></div>
+        <blockquote>"Love the strong women who work here! Highly recommend coming here for your routine checkups and dental care."</blockquote>
+        <div class="who">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da078785455d7a32f211b2_unnamed.avif" alt="" />
+          <div><div class="name">Gayathri Pratha</div><div class="src">Google Review</div></div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="top"><img class="g" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" /><span class="stars">★★★★★</span></div>
+        <blockquote>"The doctors and hygienists are very professional and attentive. I definitely recommend this dental practice!"</blockquote>
+        <div class="who">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1c935e9f03195ec443e3_Andre%20popow.avif" alt="" />
+          <div><div class="name">Andrew Popow</div><div class="src">Google Review</div></div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="top"><img class="g" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" /><span class="stars">★★★★★</span></div>
+        <blockquote>"I had an excellent experience with this team of dentists! They are professional, friendly, and quick. Highly recommend!"</blockquote>
+        <div class="who">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d217539735bc1e865d8_Erin.avif" alt="" />
+          <div><div class="name">Erin</div><div class="src">Google Review</div></div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="top"><img class="g" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" /><span class="stars">★★★★★</span></div>
+        <blockquote>"ALL the ladies that worked here were fabulous! Friendly, knowledgeable, personable. I'm glad I found this dental office!"</blockquote>
+        <div class="who">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d7ab60eb59a842b8e49_Meghan.avif" alt="" />
+          <div><div class="name">Meaghan Bull</div><div class="src">Google Review</div></div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="top"><img class="g" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" /><span class="stars">★★★★★</span></div>
+        <blockquote>"Very knowledgeable and made it a comfortable experience. They suggested treatments others missed for healthy teeth."</blockquote>
+        <div class="who">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1dbd717e072d95276fd8_emily.avif" alt="" />
+          <div><div class="name">Emily Shaw</div><div class="src">Google Review</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- GALLERY ---------- -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Inside the Practice</div>
+      <h2>A calm, modern space.</h2>
+      <p>Designed to feel less like a clinic and more like the quiet end of a Sunday morning.</p>
+    </div>
+    <div class="gallery reveal" id="gallery-grid">
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407edfea8e01930c1576f_WhatsApp%20Image%202025-04-04%20at%2017.15.45.jpeg" alt="Office interior" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407edc6b324ca8b5570c7_WhatsApp%20Image%202025-04-04%20at%2017.16.54.jpeg" alt="Operatory" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ed8bf0e1f85325c5a7_WhatsApp%20Image%202025-04-04%20at%2017.15.44.jpeg" alt="Reception area" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407edc9d9ca3f35aa7dca_WhatsApp%20Image%202025-04-04%20at%2017.15.45%20(2).jpeg" alt="Treatment room" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ed5add6dc87e3c75ac_WhatsApp%20Image%202025-04-04%20at%2017.16.54%20(1).jpeg" alt="Equipment" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ed48b51f01111fdc61_WhatsApp%20Image%202025-04-04%20at%2017.15.44%20(1).jpeg" alt="Office detail" loading="lazy" /></div>
+      <div class="gallery-item"><img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67f407ed0bede911e7a5b3c1_WhatsApp%20Image%202025-04-04%20at%2017.15.45%20(1).jpeg" alt="Waiting area" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- LOCATION ---------- -->
+<section class="section section-cream" id="location">
+  <div class="container">
+    <div class="location-grid">
+      <div class="reveal">
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=2425+Pennington+Rd+%23101,+Pennington,+NJ+08534&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Pennington Dental Care location"></iframe>
+        </div>
+      </div>
+      <div class="location-info reveal reveal-delay-1" id="contact">
+        <div class="kicker">Visit</div>
+        <h2>2425 Pennington Rd, Suite 101.</h2>
+        <p class="addr">Pennington, NJ 08534<br/>Free on-site parking · Wheelchair accessible</p>
+
+        <div class="hours-table">
+          <div class="row"><span class="day">Monday – Friday</span><span class="time">9:00 AM – 5:00 PM</span></div>
+          <div class="row"><span class="day">Saturday</span><span class="time">9:00 AM – 2:00 PM</span></div>
+          <div class="row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+        </div>
+
+        <a href="tel:6098180300" class="tel"><i class="fa-solid fa-phone"></i>609-818-0300</a>
+        <div>
+          <a href="https://www.google.com/maps/dir//2425+Pennington+Rd+%23101,+Pennington,+NJ+08534" target="_blank" rel="noopener" class="btn btn-ghost">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- FINAL CTA ---------- -->
+<section class="finale" id="book">
+  <div class="container reveal">
+    <h2>Your smile is waiting. So are we.</h2>
+    <p class="sub">Same-week appointments available · Most insurance accepted</p>
+    <a href="https://www.visitpenningtondentalcare.com/#book" class="btn btn-white">Book Your Visit <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="call-tiny">Call us · <a href="tel:6098180300">609-818-0300</a></div>
+  </div>
+</section>
+</main>
+
+<!-- ---------- FOOTER ---------- -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">P</div>
+          <div class="brand-name">Pennington Dental Care<small>Est. 2012 · Pennington, NJ</small></div>
+        </div>
+        <p>Advanced family &amp; cosmetic dentistry in Pennington, NJ. Quietly extraordinary since 2012.</p>
+        <div class="google-badge">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" />
+          <span class="stars">★★★★★</span>
+          <span>5.0 · 100+ reviews</span>
+        </div>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#service-family">Family Dentistry</a></li>
+          <li><a href="#service-cosmetic">Cosmetic Dentistry</a></li>
+          <li><a href="#service-implants">Implant Dentistry</a></li>
+          <li><a href="#service-ortho">Orthodontics</a></li>
+          <li><a href="#service-endo">Endodontics</a></li>
+          <li><a href="#service-pedi">Pediatric Dentistry</a></li>
+          <li><a href="#service-perio">Periodontics</a></li>
+          <li><a href="#service-emergency">Emergency Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="#doctor">Meet the Doctor</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#tech">Technology</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li>2425 Pennington Rd #101</li>
+          <li>Pennington, NJ 08534</li>
+          <li>Mon–Fri 9–5 · Sat 9–2</li>
+          <li><a href="tel:6098180300">609-818-0300</a></li>
+          <li><a href="https://www.google.com/maps/dir//2425+Pennington+Rd+%23101,+Pennington,+NJ+08534" target="_blank" rel="noopener">Get Directions →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Pennington Dental Care · We do not accept Medicaid</div>
+      <div><a href="#">Sitemap</a> &nbsp;·&nbsp; <a href="#">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky bar -->
+<div class="mobile-bar">
+  <a href="tel:6098180300" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> Call</a>
+  <a href="#book" class="btn btn-primary">Book Appointment</a>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- Booking Modal -->
+<div class="book-modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookTitle" aria-hidden="true">
+  <div class="book-dialog" role="document">
+    <button class="book-close" id="bookClose" aria-label="Close booking form"><i class="fa-solid fa-xmark"></i></button>
+
+    <!-- Left: Form -->
+    <div class="book-form">
+      <div class="book-form-view" id="bookFormView">
+        <div class="eyebrow-row">
+          <span class="dot"></span><span>Reserve Your Visit</span>
+        </div>
+        <h2 id="bookTitle">Book your appointment today.</h2>
+        <p class="lede">We typically reply within one business hour. New patient? Mention the $99 special.</p>
+
+        <div class="book-fields">
+          <div class="book-field">
+            <label for="bk-name">Name<span class="req">*</span></label>
+            <input id="bk-name" type="text" placeholder="First &amp; last name" autocomplete="name" required />
+          </div>
+          <div class="book-row">
+            <div class="book-field">
+              <label for="bk-email">Email Address<span class="req">*</span></label>
+              <input id="bk-email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+            <div class="book-field">
+              <label for="bk-phone">Phone<span class="req">*</span></label>
+              <input id="bk-phone" type="tel" placeholder="(000) 000-0000" autocomplete="tel" required />
+            </div>
+          </div>
+          <div class="book-row">
+            <div class="book-field">
+              <label for="bk-emergency">Is this an emergency?</label>
+              <select id="bk-emergency">
+                <option>No</option>
+                <option>Yes — same-day, please</option>
+              </select>
+            </div>
+            <div class="book-field">
+              <label for="bk-pref">Preferred Day</label>
+              <select id="bk-pref">
+                <option>No preference</option>
+                <option>Weekday morning</option>
+                <option>Weekday afternoon</option>
+                <option>Saturday morning</option>
+              </select>
+            </div>
+          </div>
+          <div class="book-field">
+            <label for="bk-reason">Reason for appointment</label>
+            <textarea id="bk-reason" placeholder="Cleaning, consult, second opinion…"></textarea>
+          </div>
+          <button type="button" class="book-submit" id="bookSubmit">Submit <i class="fa-solid fa-arrow-right"></i></button>
+          <div class="book-foot">If you prefer to speak to a team member,<br/>please call <a href="tel:6098180300">609-818-0300</a>.</div>
+        </div>
+      </div>
+
+      <div class="book-success" id="bookSuccess">
+        <div class="check"><i class="fa-solid fa-check"></i></div>
+        <h3>Request received.</h3>
+        <p>Thank you. A team member will reach out shortly to confirm your appointment.</p>
+      </div>
+    </div>
+
+    <!-- Right: Brand & Review -->
+    <aside class="book-aside" aria-hidden="true">
+      <div class="aside-brand">
+        <div class="mark">P</div>
+        <div class="wordmark">Pennington Dental Care<small>Est. 2012 · Pennington, NJ</small></div>
+      </div>
+      <div class="aside-tag">
+        <h3>Quietly extraordinary care, since 2012.</h3>
+        <p>Modern, calm, and unhurried — the way dentistry should feel.</p>
+      </div>
+      <div class="aside-review book-fade" id="asideReview">
+        <div class="top">
+          <img src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67d9ddbfff9b76b42ca473a9_icon-google.svg" alt="Google" />
+          <span class="stars">★★★★★</span>
+        </div>
+        <blockquote id="arQuote">“Love the strong women who work here! Highly recommend coming here for your routine checkups and dental care.”</blockquote>
+        <div class="who">
+          <img id="arAvatar" src="https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da078785455d7a32f211b2_unnamed.avif" alt="" />
+          <div><div class="name" id="arName">Gayathri Pratha</div><div class="src">Google Review</div></div>
+        </div>
+      </div>
+      <div class="aside-review-nav">
+        <button type="button" id="arPrev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" id="arNext" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+// ---------- Reveal on scroll ----------
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => io.observe(el));
+
+// ---------- Hero load ----------
+window.addEventListener('load', () => {
+  document.querySelector('.hero').classList.add('loaded');
+  const words = document.querySelectorAll('.hero h1 .word');
+  words.forEach((w, i) => { w.style.transitionDelay = (i * 90 + 100) + 'ms'; });
+});
+
+// ---------- Nav scroll state (rAF-throttled) ----------
+const nav = document.getElementById('nav');
+let navTicking = false;
+let lastScrolled = false;
+window.addEventListener('scroll', () => {
+  if (navTicking) return;
+  navTicking = true;
+  requestAnimationFrame(() => {
+    const scrolled = window.scrollY > 100;
+    if (scrolled !== lastScrolled) {
+      nav.classList.toggle('scrolled', scrolled);
+      lastScrolled = scrolled;
+    }
+    navTicking = false;
+  });
+}, { passive: true });
+
+// ---------- Drawer ----------
+const drawer = document.getElementById('drawer');
+const scrim = document.getElementById('scrim');
+function openDrawer() { drawer.classList.add('open'); scrim.classList.add('open'); drawer.setAttribute('aria-hidden', 'false'); }
+function closeDrawer() { drawer.classList.remove('open'); scrim.classList.remove('open'); drawer.setAttribute('aria-hidden', 'true'); }
+document.getElementById('hamburger').addEventListener('click', openDrawer);
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+scrim.addEventListener('click', closeDrawer);
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+// ---------- Hero primary shine sweep loop ----------
+const heroBtn = document.getElementById('heroPrimary');
+function sweepOnce() {
+  heroBtn.classList.remove('sweep');
+  void heroBtn.offsetWidth;
+  heroBtn.classList.add('sweep');
+}
+setInterval(sweepOnce, 8000);
+setTimeout(sweepOnce, 2400);
+
+// ---------- Before/After slider ----------
+(function(){
+  const ba = document.getElementById('ba');
+  const handle = document.getElementById('baHandle');
+  const afterWrap = ba.querySelector('.ba-after-wrap');
+  let dragging = false;
+
+  function setPos(clientX) {
+    const r = ba.getBoundingClientRect();
+    let pct = ((clientX - r.left) / r.width) * 100;
+    pct = Math.max(0, Math.min(100, pct));
+    handle.style.left = pct + '%';
+    afterWrap.style.clipPath = `inset(0 0 0 ${pct}%)`;
+    handle.setAttribute('aria-valuenow', Math.round(pct));
+  }
+
+  function down(e) { dragging = true; ba.style.cursor = 'ew-resize'; move(e); }
+  function up() { dragging = false; ba.style.cursor = ''; }
+  function move(e) {
+    if (!dragging) return;
+    const x = (e.touches ? e.touches[0].clientX : e.clientX);
+    setPos(x);
+    if (e.cancelable) e.preventDefault();
+  }
+  handle.addEventListener('mousedown', down);
+  ba.addEventListener('mousedown', down);
+  window.addEventListener('mousemove', move);
+  window.addEventListener('mouseup', up);
+  handle.addEventListener('touchstart', down, { passive: true });
+  ba.addEventListener('touchstart', down, { passive: true });
+  window.addEventListener('touchmove', move, { passive: false });
+  window.addEventListener('touchend', up);
+})();
+
+// ---------- Stat counters ----------
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1600;
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - t, 3);
+      const val = Math.round(target * eased);
+      el.textContent = val.toLocaleString() + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.stat .num').forEach(el => statObserver.observe(el));
+
+// ---------- Marquee duplication for seamless loop ----------
+(function(){
+  const track = document.getElementById('marquee');
+  const cards = Array.from(track.children);
+  cards.forEach(c => track.appendChild(c.cloneNode(true)));
+})();
+
+// ---------- Gallery lightbox ----------
+(function(){
+  const items = Array.from(document.querySelectorAll('#gallery-grid .gallery-item img'));
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  let idx = 0;
+  function open(i) { idx = i; lbImg.src = items[idx].src; lbImg.alt = items[idx].alt || ''; lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+  function next(d) { idx = (idx + d + items.length) % items.length; lbImg.src = items[idx].src; }
+  items.forEach((img, i) => { img.parentElement.addEventListener('click', () => open(i)); });
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', () => next(-1));
+  document.getElementById('lbNext').addEventListener('click', () => next(1));
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  window.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') next(-1);
+    if (e.key === 'ArrowRight') next(1);
+  });
+})();
+
+// ---------- Booking modal ----------
+(function(){
+  const modal = document.getElementById('bookModal');
+  const dialog = modal.querySelector('.book-dialog');
+  const closeBtn = document.getElementById('bookClose');
+  const submitBtn = document.getElementById('bookSubmit');
+  const formView = document.getElementById('bookFormView');
+  const successView = document.getElementById('bookSuccess');
+  const nameField = document.getElementById('bk-name');
+
+  let lastFocus = null;
+
+  function open(e) {
+    if (e) e.preventDefault();
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    // Reset to form view if previously submitted
+    formView.style.display = '';
+    successView.classList.remove('show');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = 'Submit <i class="fa-solid fa-arrow-right"></i>';
+    setTimeout(() => { try { nameField.focus({ preventScroll: true }); } catch(_) {} }, 320);
+  }
+  function close() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+
+  // Wire every Book trigger: anchors to #book + final-CTA visit link
+  document.querySelectorAll('a[href="#book"], a[href$="#book"]').forEach(a => {
+    a.addEventListener('click', open);
+  });
+
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) close();
+  });
+
+  // Phone formatting
+  const phone = document.getElementById('bk-phone');
+  phone.addEventListener('input', () => {
+    const d = phone.value.replace(/\D/g, '').slice(0, 10);
+    if (d.length === 0) { phone.value = ''; return; }
+    if (d.length <= 3) phone.value = '(' + d;
+    else if (d.length <= 6) phone.value = '(' + d.slice(0,3) + ') ' + d.slice(3);
+    else phone.value = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+  });
+
+  // Submit handler — simple client-side validation, no backend
+  submitBtn.addEventListener('click', () => {
+    const name = nameField.value.trim();
+    const email = document.getElementById('bk-email').value.trim();
+    const ph = phone.value.trim();
+    const missing = [];
+    if (!name) missing.push(nameField);
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) missing.push(document.getElementById('bk-email'));
+    if (!ph || ph.replace(/\D/g, '').length < 10) missing.push(phone);
+    if (missing.length) {
+      missing.forEach(el => {
+        el.style.borderColor = '#E5484D';
+        el.addEventListener('input', function once(){ el.style.borderColor = ''; el.removeEventListener('input', once); }, { once: true });
+      });
+      missing[0].focus();
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending <i class="fa-solid fa-spinner fa-spin"></i>';
+    setTimeout(() => {
+      formView.style.display = 'none';
+      successView.classList.add('show');
+    }, 700);
+  });
+
+  // Rotate aside review every 6s + arrows
+  const reviews = [
+    { q: '“Love the strong women who work here! Highly recommend coming here for your routine checkups and dental care.”', name: 'Gayathri Pratha', img: 'https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67da078785455d7a32f211b2_unnamed.avif' },
+    { q: '“The doctors and hygienists are very professional and attentive. I definitely recommend this dental practice!”', name: 'Andrew Popow', img: 'https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1c935e9f03195ec443e3_Andre%20popow.avif' },
+    { q: '“I had an excellent experience with this team of dentists! Professional, friendly, and quick. Highly recommend!”', name: 'Erin', img: 'https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d217539735bc1e865d8_Erin.avif' },
+    { q: '“ALL the ladies that worked here were fabulous! Friendly, knowledgeable, personable. I’m glad I found this office!”', name: 'Meaghan Bull', img: 'https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1d7ab60eb59a842b8e49_Meghan.avif' },
+    { q: '“Very knowledgeable and made it a comfortable experience. They suggested treatments others missed.”', name: 'Emily Shaw', img: 'https://cdn.prod.website-files.com/67d9ddbfff9b76b42ca47388/67db1dbd717e072d95276fd8_emily.avif' }
+  ];
+  let rIdx = 0;
+  const card = document.getElementById('asideReview');
+  const qEl = document.getElementById('arQuote');
+  const nEl = document.getElementById('arName');
+  const aEl = document.getElementById('arAvatar');
+  function showReview(i) {
+    rIdx = (i + reviews.length) % reviews.length;
+    card.classList.add('fading');
+    setTimeout(() => {
+      qEl.textContent = reviews[rIdx].q;
+      nEl.textContent = reviews[rIdx].name;
+      aEl.src = reviews[rIdx].img;
+      card.classList.remove('fading');
+    }, 220);
+  }
+  document.getElementById('arPrev').addEventListener('click', () => showReview(rIdx - 1));
+  document.getElementById('arNext').addEventListener('click', () => showReview(rIdx + 1));
+  let rotateTimer = null;
+  function startRotate() { clearInterval(rotateTimer); rotateTimer = setInterval(() => showReview(rIdx + 1), 6000); }
+  // Only auto-rotate while modal is open
+  const obs = new MutationObserver(() => {
+    if (modal.classList.contains('open')) startRotate();
+    else clearInterval(rotateTimer);
+  });
+  obs.observe(modal, { attributes: true, attributeFilter: ['class'] });
+})();
+</script>
+</body>
+</html>
